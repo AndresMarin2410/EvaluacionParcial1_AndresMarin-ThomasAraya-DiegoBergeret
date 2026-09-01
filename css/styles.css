@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*=== Inicio Header === */
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 0;
+}
+
+.logo-veterinaria {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+/*=== Fin Header === */
+
+
+
+/*=== Inicio Main === */
+
+
+/*=== Fin Main === */
+
+
+
+/*=== Inicio Footer === */
+
+
+/*=== Fin Footer === */
