@@ -7,6 +7,7 @@
 /*=== Inicio Header === */
 .logo-titulo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 12px;
@@ -18,6 +19,22 @@
     width: 80px;
     object-fit: contain;
 }
+h2 {
+    font-weight: lighter;
+}
+
+.navbar, ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.navbar, li, a {
+    text-decoration: none;
+    color: black;
+}
+
 
 /*=== Fin Header === */
 
