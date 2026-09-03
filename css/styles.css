@@ -52,5 +52,22 @@ h2 {
 
 /*=== Inicio Footer === */
 
+.footer-sitio{
+
+    background-color: #1a2536;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial,sans-serif;
+}
+
+.contenedor-footer{
+    max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  gap: 30px;
+}
 
 /*=== Fin Footer === */
