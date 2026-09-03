@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #F0FDF4;
 }
-/*=== Index ===*/
+
 /*=== Inicio Header === */
 .logo-titulo {
     display: flex;
@@ -58,10 +59,14 @@ h2 {
     color: #ffffff;
     padding: 40px 20px;
     font-family: Arial,sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .contenedor-footer{
-    max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -70,29 +75,28 @@ h2 {
   gap: 30px;
 }
 
+.columna-footer {
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+}
+
+.columna-footer p {
+  margin: 12px 0;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+
+.icono {
+  margin-right: 6px;
+}
+
+.logo-footer {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    position:relative;
+    right:15px;
+}
 /*=== Fin Footer === */
-
-
-/* Fin index*/
-
-/*=========================================================================*/
-
-/*=== Inicio Registro de usuario ===*/
-
-/*=== Inicio Header === */
-
-/*=== Fin Header === */
-
-/*=== Fin Header === */
-
-/*=== Inicio Main === */
-
-/*=== Fin Main === */
-
-/*=== Inicio Footer === */
-
-/*=== Fin Footer === */
-
-/*=== Fin Registro de usuario === */
-
-/*=========================================================================*/
