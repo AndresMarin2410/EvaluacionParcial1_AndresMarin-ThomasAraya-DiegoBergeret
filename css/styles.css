@@ -24,6 +24,7 @@ body {
 }
 h2 {
     font-weight: lighter;
+    text-align: center;
 }
 
 .navbar, ul{
@@ -31,6 +32,7 @@ h2 {
     gap: 20px;
     list-style-type: none;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .navbar, li, a {
@@ -69,6 +71,25 @@ h2 {
 /*=== Fin Header === */
 
 /*=== Inicio Main === */
+#formulario-registro-mascota {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    gap: 9px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#formulario-registro-mascota input::placeholder {
+    padding: 3px;
+}
+
+#formulario-registro-mascota label {
+    font-weight: 700;
+}
 
 /*=== Fin Main === */
 
