@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funciones.js"></script>
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo-titulo">
+            <h1>Iniciar Sesión</h1>
+        </div>
+
+        <nav class="volver-inicio">
+            <ul>
+                <li><a href="index.html">Volver al inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formularios">
+            <form id="formulario-login" class="formulario-registro" novalidate>
+                <h2>Acceso a tu cuenta</h2>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" placeholder="correo@ejemplo.cl" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" placeholder="xxxxxxxxxx" required>
+
+                <button type="submit" class="btn-registrar">Entrar</button>
+
+                <div class="opcion-crear-cuenta">
+                    <p>¿Aún no tienes una cuenta? <a href="RegistroUsuario.html">Regístrate aquí</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer-sitio">
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p><span class="icono">📞</span>+569-55668923</p>
+                <p><span class="icono">✉️</span>vetSanmarcos@gmail.com</p>
+                <p><span class="icono">📍</span>Rancagua, Región del Libertador General Bernardo O'Higgins</p>
+            </div>
+
+            <div class="columna-footer">
+                <h3>Horario de atención</h3>
+                <p><span class="icono">📅</span>Los 365 días del año</p>
+                <p><span class="icono">⏳</span> Urgencias las 24 hrs. del día</p>
+            </div>
+
+            <div>
+                <img src="img/perro y gato.png" class="logo-footer" alt="Logo de la veterinaria">
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
