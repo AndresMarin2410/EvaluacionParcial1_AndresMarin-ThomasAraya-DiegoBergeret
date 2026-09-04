@@ -13,67 +13,90 @@
         <div class="logo-titulo">
             <h1>Registro</h1>
         </div>
-        <nav class="navbar">
+
+        <nav class="volver-inicio">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Volver al inicio</a></li>
+                <li><a href="IniciarSesion.html">Iniciar Sesion</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <form id="formulario-registro-mascota" novalidate>
-            <h2>Datos Mascota</h2>
-            <label for="nombre-mascota">Nombre Mascota:</label>
-            <input type="text" id="nombre-mascota" placeholder="Nombre Mascota" required>
+        <section class="formularios">
+            <form id="formulario-mascota" class="formulario-registro" novalidate>
+                <h2>Datos Mascota</h2>
+                <label for="nombre-mascota">Nombre Mascota:</label>
+                <input type="text" id="nombre-mascota" placeholder="Nombre Mascota" required>
 
-            <label for="especie">Especie:</label>
-            <input type="text"id="especie" placeholder="Especie" required>
+                <label for="especie">Especie:</label>
+                <input type="text"id="especie" placeholder="Especie" required>
 
-            <label for="raza">Raza:</label>
-            <input type="text" id="raza" placeholder="Raza">
+                <label for="raza">Raza:</label>
+                <input type="text" id="raza" placeholder="Raza">
 
-            <label for="sexo">Sexo:</label>
-            <input type="text" id="sexo" placeholder="Sexo" required>
+                <label for="sexo">Sexo:</label>
+                <input type="text" id="sexo" placeholder="Sexo" required>
 
-            <label for="fecha-nacimiento">Fecha de nacimiento: </label>
-            <input type="date" id="fecha-nacimiento">
-            <label for="comentario">Comentario (Opcional):</label>
-            <textarea id="comentario"></textarea>
-            <fieldset>
-            <p>¿La mascota está esterilizada?</p>
-                <label>
-                <input type="radio" name="esterilizada" value="si">
-                Sí
-                </label>
+                <label for="fecha-nacimiento">Fecha de nacimiento: </label>
+                <input type="date" id="fecha-nacimiento">
+                <label for="comentario">Comentario (Opcional):</label>
+                <textarea id="comentario"></textarea>
+                <fieldset>
+                <p>¿La mascota está esterilizada?</p>
+                    <label>
+                    <input type="radio" name="esterilizada" value="si">
+                    Sí
+                    </label>
 
-                <label>
-                <input type="radio" name="esterilizada" value="no" checked>
-                No
-                </label>
-            </fieldset>
-            <h2>Datos Dueño</h2>
-            <label for="nombre-completo">Nombre Completo:</label>
-            <input type="text" id="nombre-completo" placeholder="Nombre completo" required>
+                    <label>
+                    <input type="radio" name="esterilizada" value="no" checked>
+                    No
+                    </label>
+                </fieldset>
+            </form>
+            <form id="formulario-dueño" class="formulario-registro" novalidate>
+                <h2>Datos Dueño</h2>
+                <label for="nombre-completo">Nombre Completo:</label>
+                <input type="text" id="nombre-completo" placeholder="Nombre completo" required>
 
-            <label for="rut">RUN:</label>
-            <input type="text" id="rut" placeholder="xx.xxx.xxx-x">
+                <label for="rut">RUN:</label>
+                <input type="text" id="rut" placeholder="xx.xxx.xxx-x">
 
-            <label for="telefono">Telefono:</label>
-            <input type="text" id="telefono" placeholder="+569xxxxxxxx" required>
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" placeholder="+569xxxxxxxx" required>
 
-            <label for="correo">Correo electronico:</label>
-            <input type="email" id="correo" placeholder="correo@ejemplo.cl" required>
+                <label for="correo">Correo electronico:</label>
+                <input type="email" id="correo" placeholder="correo@ejemplo.cl" required>
 
-            <label for="direccion">Direccion:</label>
-            <input type="text" id="direccion" placeholder="Direccion" required>
-        </form>
-
+                <label for="direccion">Direccion:</label>
+                <input type="text" id="direccion" placeholder="Direccion" required>
+            </form>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer-sitio">
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p><span class="icono">📞</span>+569-55668923</p>
+                <p><span class="icono">✉️</span>vetSanmarcos@gmail.com</p>
+                <p><span class="icono">📍</span>Rancagua, Región del Libertador General Bernardo O'Higgins</p>
+            </div>
+
+            <div class="columna-footer">
+
+                <h3>Horario de atención</h3>
+                <p><span class="icono">📅</span>Los 365 días del año</p>
+                <p><span class="icono">⏳</span> Urgencias las 24 hrs. del dia</p>
+                
+            </div>
+
+            <div>
+                <img src="img/perro y gato.png" class="logo-footer">
+            </div>
+        </div>
+
         
     </footer>
     
