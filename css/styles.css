@@ -28,20 +28,36 @@ h2 {
     text-align: center;
 }
 
-.navbar, ul{
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #1a2536;
+}
+
+.navbar ul {
     display: flex;
-    gap: 20px;
-    list-style-type: none;
-    justify-content: center;
-    margin-bottom: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar, li, a {
+.navbar a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
+.nav-centro {
+    justify-content: center;
+    gap: 20px;
+}
 
+.nav-derecha {
+    justify-content: flex-end;
+    gap: 8px; 
+    padding-right: 5px; 
+}
 /*=== Fin Header === */
 
 
@@ -100,26 +116,57 @@ h2 {
 
 /*=== Inicio Header === */
 
+.volver-inicio ul{
+    display: flex;
+    list-style-type: none;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.volver-inicio a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.volver-inicio a:hover{
+    background-color: white;
+}
+
 /*=== Fin Header === */
 
 /*=== Inicio Main === */
-#formulario-registro-mascota {
+.formularios {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-    gap: 9px;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-    padding: 24px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    justify-content: center; 
+    align-items: stretch; 
+    gap: 30px;              
+    padding: 20px;
+    flex-wrap: wrap;        
 }
 
-#formulario-registro-mascota input::placeholder {
+.formulario-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+    width: 100%;
+    max-width: 450px;
+    margin: 0;               
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.29);
+    box-sizing: border-box;
+}
+
+.formulario-registro input::placeholder {
     padding: 3px;
 }
 
-#formulario-registro-mascota label {
+.formulario-registro label {
     font-weight: 700;
 }
 
