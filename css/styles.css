@@ -7,6 +7,9 @@
 body {
     background-color: #F4F7F6;
     color: #263238;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /*=== Inicio Header === */
@@ -65,7 +68,13 @@ h2 {
 
 
 /*=== Inicio Main === */
-
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
 /*=== Fin Main === */
 
@@ -78,9 +87,6 @@ h2 {
     color: #e0ece8;
     padding: 40px 20px;
     font-family: Arial,sans-serif;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
 }
 
@@ -164,7 +170,7 @@ h2 {
 }
 
 .formulario-registro {
-    background-color: FFFFFF;
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     gap: 9px;
@@ -193,8 +199,7 @@ h2 {
     outline-color: #1e6b52;
     background-color: #ffffff;
 }
-.formulario-registro input::placeholder,
-.formulario-registro textarea::placeholder {
+.formulario-registro input::placeholder, .formulario-registro textarea::placeholder {
     color: #8898aa;
     padding-left: 3px;
 }
@@ -240,3 +245,111 @@ h2 {
 /*=== Fin Registro de usuario === */
 
 /*=========================================================================*/
+
+/*=== Inicio blogs === */
+
+/*=== Inicio header === */
+
+/*=== fin blogs === */
+
+/*=== Inicio main === */
+main {
+    max-width: 1100px; /* Limita el ancho de la página para que no se estire */
+    margin: 40px auto; /* Centra el contenedor en la pantalla */
+    padding: 0 20px;
+}
+/*=== Fin main === */
+
+
+/*=== Inicio blogs === */
+.blog-contenedor {
+    display: grid; /* Cambiamos a cuadrícula para formato tarjeta */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Se adapta a la pantalla */
+    gap: 30px;
+}
+
+.articulo-blog {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra suave para dar relieve */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto para que la tarjeta se levante un poco al pasar el mouse */
+.articulo-blog:hover {
+    transform: translateY(-5px); 
+}
+
+.imagen-articulo {
+    width: 100%;
+    height: 220px; /* Alto fijo para que todas las tarjetas se vean iguales */
+    object-fit: cover;
+    background-color: #e0e0e0; 
+}
+
+.contenido-articulo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permite que la tarjeta ocupe el espacio completo */
+    text-align: left; /* Fuerzo la alineación a la izquierda por si el header lo centró */
+}
+
+.categoria {
+    align-self: flex-start;
+    background-color: #def2f1;
+    color: #2b7a78;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.articulo-blog h2 {
+    color: #2b7a78;
+    font-size: 19px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.meta-info {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.resumen {
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Esto empuja el botón "Leer más" siempre hacia abajo */
+}
+
+.btn-leer-mas {
+    align-self: flex-start;
+    background-color: #2b7a78;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-leer-mas:hover {
+    background-color: #205c5a;
+}
+
+/*=== fin blogs === */
+
+/*=== Inicio footer === */
+
+/*=== fin footer === */
+
+/*=== Fin blogs === */
