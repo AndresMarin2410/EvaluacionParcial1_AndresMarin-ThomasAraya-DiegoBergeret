@@ -254,8 +254,8 @@ main {
 
 /*=== Inicio main === */
 main {
-    max-width: 1100px; /* Limita el ancho de la página para que no se estire */
-    margin: 40px auto; /* Centra el contenedor en la pantalla */
+    max-width: 1100px; 
+    margin: 40px auto; 
     padding: 0 20px;
 }
 /*=== Fin main === */
@@ -263,8 +263,8 @@ main {
 
 /*=== Inicio blogs === */
 .blog-contenedor {
-    display: grid; /* Cambiamos a cuadrícula para formato tarjeta */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Se adapta a la pantalla */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
     gap: 30px;
 }
 
@@ -275,18 +275,17 @@ main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra suave para dar relieve */
-    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease; 
 }
 
-/* Efecto para que la tarjeta se levante un poco al pasar el mouse */
 .articulo-blog:hover {
     transform: translateY(-5px); 
 }
 
 .imagen-articulo {
     width: 100%;
-    height: 220px; /* Alto fijo para que todas las tarjetas se vean iguales */
+    height: 220px; 
     object-fit: cover;
     background-color: #e0e0e0; 
 }
@@ -295,8 +294,8 @@ main {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Permite que la tarjeta ocupe el espacio completo */
-    text-align: left; /* Fuerzo la alineación a la izquierda por si el header lo centró */
+    flex-grow: 1;
+    text-align: left; 
 }
 
 .categoria {
@@ -317,7 +316,7 @@ main {
     line-height: 1.3;
 }
 
-.meta-info {
+.fuente-info {
     font-size: 13px;
     color: #777;
     margin-bottom: 12px;
@@ -327,7 +326,7 @@ main {
     color: #444;
     font-size: 14px;
     margin-bottom: 20px;
-    flex-grow: 1; /* Esto empuja el botón "Leer más" siempre hacia abajo */
+    flex-grow: 1; 
 }
 
 .btn-leer-mas {
