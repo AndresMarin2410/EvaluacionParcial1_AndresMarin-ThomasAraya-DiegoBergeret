@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funciones.js" defer></script>
+    <title>Usuario - Panel administrador</title>
+</head>
+
+<body class="admin-body">
+
+    <header class="admin-header">
+        <div class="logo-titulo">
+            <img src="img/01fd6fe38564f122b6e092a7c74ab1ce.png" class="logo-veterinaria" alt="logo-veterinaria">
+            <h1>Panel administrador</h1>
+        </div>
+    </header>
+
+    <div class="admin-layout">
+
+        <nav class="admin-menu">
+            <ul>
+                <li><a href="admin-home.html">Inicio</a></li>
+                <li><a href="admin-producto.html">Producto</a></li>
+                <li><a href="admin-usuario.html" class="activo">Usuario</a></li>
+                <li><a href="index.html">Volver a la tienda</a></li>
+            </ul>
+        </nav>
+
+        <main class="admin-contenido">
+            <h2>Gestión de usuarios</h2>
+            <p>
+                Desde aquí puedes revisar las cuentas de clientes ya
+                registradas, agregar una cuenta nueva, o editar los datos
+                de una existente.
+            </p>
+
+            <section class="admin-resumen">
+                <article class="admin-tarjeta-resumen">
+                    <h3>Mostrar usuario</h3>
+                    <p>Revisa el listado completo de cuentas de clientes registradas.</p>
+                    <a href="admin-mostrar-usuario.html" class="boton">Ver listado</a>
+                </article>
+
+                <article class="admin-tarjeta-resumen">
+                    <h3>Nuevo usuario</h3>
+                    <p>Crea una cuenta de cliente nueva directamente desde el panel.</p>
+                    <a href="admin-nuevo-usuario.html" class="boton">Agregar nuevo</a>
+                </article>
+
+                <article class="admin-tarjeta-resumen">
+                    <h3>Editar usuario</h3>
+                    <p>Modifica los datos de una cuenta de cliente ya existente.</p>
+                    <a href="admin-editar-usuario.html" class="boton">Editar</a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="footer-sitio">
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p><span class="icono">📞</span>+569-55668923</p>
+                <p><span class="icono">✉️</span>vetSanmarcos@gmail.com</p>
+                <p><span class="icono">📍</span>Rancagua, Región del Libertador General Bernardo O'Higgins</p>
+            </div>
+            <div class="columna-footer">
+                <h3>Horario de atención</h3>
+                <p><span class="icono">📅</span>Los 365 días del año</p>
+                <p><span class="icono">⏳</span> Urgencias las 24 hrs. del dia</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
