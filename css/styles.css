@@ -141,17 +141,13 @@ main {
   border-radius: 6px;
   cursor: pointer;
   transition:
-    background-color 0.2s ease,
-    transform 0.1s ease;
+    background-color 0.2s ease, transform 0.1s ease;
 }
 
 .volver-inicio a:hover {
   background-color: #154c3a;
 }
 
-.volver-inicio a:active {
-  transform: scale(0.98);
-}
 
 /*=== Fin Header === */
 
@@ -185,20 +181,18 @@ main {
   color: #263238;
 }
 
-.formulario-registro input,
-.formulario-registro textarea {
+.formulario-registro input, .formulario-registro textarea {
   background-color: #fafbfc;
   border: 1px solid #cfd8dc;
   color: #263238;
+  padding: 5px;
 }
-.formulario-registro input:focus,
-.formulario-registro textarea:focus {
+.formulario-registro input:focus, .formulario-registro textarea:focus {
   border-color: #1e6b52;
   outline-color: #1e6b52;
   background-color: #ffffff;
 }
-.formulario-registro input::placeholder,
-.formulario-registro textarea::placeholder {
+.formulario-registro input::placeholder, .formulario-registro textarea::placeholder {
   color: #8898aa;
   padding-left: 3px;
 }
