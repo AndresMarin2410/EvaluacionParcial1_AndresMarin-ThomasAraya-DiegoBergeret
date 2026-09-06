@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funciones.js" defer></script>
+    <title>Editar producto - Panel administrador</title>
+</head>
+
+<body class="admin-body">
+
+    <header class="admin-header">
+        <div class="logo-titulo">
+            <img src="img/01fd6fe38564f122b6e092a7c74ab1ce.png" class="logo-veterinaria" alt="logo-veterinaria">
+            <h1>Panel administrador</h1>
+        </div>
+    </header>
+
+    <div class="admin-layout">
+
+        <nav class="admin-menu">
+            <ul>
+                <li><a href="admin-home.html">Inicio</a></li>
+                <li><a href="admin-producto.html" class="activo">Producto</a></li>
+                <li><a href="admin-usuario.html">Usuario</a></li>
+                <li><a href="index.html">Volver a la tienda</a></li>
+            </ul>
+        </nav>
+
+        <main class="admin-contenido">
+            <h2>Editar producto</h2>
+            <p>Editando: <strong>Consulta general</strong> (código PROD-001)</p>
+
+            <form id="formulario-editar-producto" class="formulario-registro" novalidate>
+
+                <label for="codigo-producto">Código producto:</label>
+                <input type="text" id="codigo-producto" value="PROD-001" required minlength="3">
+
+                <label for="nombre-producto">Nombre:</label>
+                <input type="text" id="nombre-producto" value="Consulta general" required maxlength="100">
+
+                <label for="descripcion-producto">Descripción:</label>
+                <textarea id="descripcion-producto"
+                    maxlength="500">Consulta veterinaria general para perros y gatos, incluye revisión física completa.</textarea>
+
+                <label for="precio-producto">Precio:</label>
+                <input type="number" id="precio-producto" value="15000" required min="0" step="0.01">
+
+                <label for="stock-producto">Stock:</label>
+                <input type="number" id="stock-producto" value="999" required min="0" step="1">
+
+                <label for="stock-critico-producto">Stock crítico (opcional):</label>
+                <input type="number" id="stock-critico-producto" value="5" min="0" step="1">
+
+                <label for="categoria-producto">Categoría:</label>
+                <select id="categoria-producto" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option selected>Consultas</option>
+                    <option>Vacunación</option>
+                    <option>Cirugía</option>
+                    <option>Desparasitación</option>
+                    <option>Exámenes</option>
+                    <option>Otros</option>
+                </select>
+
+                <label for="imagen-producto">Imagen (opcional):</label>
+                <input type="file" id="imagen-producto" accept="image/*">
+
+                <button type="submit" class="btn-registrar">Guardar cambios</button>
+                <p id="mensaje-confirmacion-producto"></p>
+            </form>
+        </main>
+
+    </div>
+
+    <footer class="footer-sitio">
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p><span class="icono">📞</span>+569-55668923</p>
+                <p><span class="icono">✉️</span>vetSanmarcos@gmail.com</p>
+                <p><span class="icono">📍</span>Rancagua, Región del Libertador General Bernardo O'Higgins</p>
+            </div>
+            <div class="columna-footer">
+                <h3>Horario de atención</h3>
+                <p><span class="icono">📅</span>Los 365 días del año</p>
+                <p><span class="icono">⏳</span> Urgencias las 24 hrs. del dia</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
