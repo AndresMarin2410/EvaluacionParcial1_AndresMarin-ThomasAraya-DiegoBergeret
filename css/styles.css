@@ -207,8 +207,7 @@ main {
   background-color: #fdecea;
 }
 
-.formulario-registro #mensaje-confirmacion-producto,
-.formulario-registro #mensaje-confirmacion {
+.formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
   margin-top: 12px;
