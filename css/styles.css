@@ -690,17 +690,6 @@ main {
   flex-direction: column;
 }
 
-.etiqueta-especie {
-  align-self: flex-start;
-  background-color: #e0ece8;
-  color: #1a2f2b;
-  padding: 6px 12px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-
 .info-servicio h1 {
   color: #1a2f2b;
   font-size: 2.2rem;
