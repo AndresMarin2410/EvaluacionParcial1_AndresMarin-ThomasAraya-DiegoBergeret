@@ -204,7 +204,7 @@ if (formularioInicioSesion) {
     e.preventDefault();
     
 
-    const patronCorreoLogin = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const patronCorreoLogin = /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;;
     
     const correo = document.querySelector('#correo');
     const contra = document.querySelector('#contrasena');
@@ -212,15 +212,18 @@ if (formularioInicioSesion) {
     
     let formularioLogin = true;
 
-    if (correo.value.trim() === '' || !patronCorreoLogin.test(correo.value.trim())) {
+    const valorCorreo = correo.value.trim();
+    if (valorCorreo === '' || valorCorreo > 100 || !patronCorreoLogin.test(correo.value.trim())) {
       correo.classList.add('campo-error');
       formularioLogin = false;
     } else {
       correo.classList.remove('campo-error');
     }
 
-    // Validación de contraseña
-    if (contra.value.trim() === '') {
+    // validacion de contrasena
+    const valorContra = contra.value.trim();
+
+    if (valorContra === '' || valorContra.length < 4 || valorContra.length > 10) {
       contra.classList.add('campo-error');
       formularioLogin = false;
     } else {
