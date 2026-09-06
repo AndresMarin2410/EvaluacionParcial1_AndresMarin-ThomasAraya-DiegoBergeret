@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funciones.js" defer></script>
+    <title>Mostrar usuario - Panel administrador</title>
+</head>
+
+<body class="admin-body">
+
+    <header class="admin-header">
+        <div class="logo-titulo">
+            <img src="img/01fd6fe38564f122b6e092a7c74ab1ce.png" class="logo-veterinaria" alt="logo-veterinaria">
+            <h1>Panel administrador</h1>
+        </div>
+    </header>
+
+    <div class="admin-layout">
+
+        <nav class="admin-menu">
+            <ul>
+                <li><a href="admin-home.html">Inicio</a></li>
+                <li><a href="admin-producto.html">Producto</a></li>
+                <li><a href="admin-usuario.html" class="activo">Usuario</a></li>
+                <li><a href="index.html">Volver a la tienda</a></li>
+            </ul>
+        </nav>
+
+        <main class="admin-contenido">
+            <h2>Listado de usuarios</h2>
+            <p>Estas son las cuentas de clientes registradas actualmente en el sitio.</p>
+
+            <a href="admin-nuevo-usuario.html" class="boton">+ Nuevo usuario</a>
+
+            <table class="tabla-admin">
+                <caption>Usuarios registrados</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Comuna</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Javiera Muñoz</td>
+                        <td>javiera.munoz@gmail.com</td>
+                        <td>Rancagua</td>
+                        <td><a href="admin-editar-usuario.html" class="enlace-editar">Editar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Matías Contreras</td>
+                        <td>matias.contreras@gmail.com</td>
+                        <td>Machalí</td>
+                        <td><a href="admin-editar-usuario.html" class="enlace-editar">Editar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Fernanda Rojas</td>
+                        <td>fernanda.rojas@duoc.cl</td>
+                        <td>Rancagua</td>
+                        <td><a href="admin-editar-usuario.html" class="enlace-editar">Editar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ignacio Pizarro</td>
+                        <td>ignacio.pizarro@gmail.com</td>
+                        <td>Graneros</td>
+                        <td><a href="admin-editar-usuario.html" class="enlace-editar">Editar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Camila Soto</td>
+                        <td>camila.soto@gmail.com</td>
+                        <td>Rancagua</td>
+                        <td><a href="admin-editar-usuario.html" class="enlace-editar">Editar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+    </div>
+
+    <footer class="footer-sitio">
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p><span class="icono">📞</span>+569-55668923</p>
+                <p><span class="icono">✉️</span>vetSanmarcos@gmail.com</p>
+                <p><span class="icono">📍</span>Rancagua, Región del Libertador General Bernardo O'Higgins</p>
+            </div>
+            <div class="columna-footer">
+                <h3>Horario de atención</h3>
+                <p><span class="icono">📅</span>Los 365 días del año</p>
+                <p><span class="icono">⏳</span> Urgencias las 24 hrs. del dia</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
