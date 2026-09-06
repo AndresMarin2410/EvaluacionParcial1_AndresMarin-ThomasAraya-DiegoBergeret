@@ -200,7 +200,7 @@ if (formularioInicioSesion) {
     e.preventDefault();
     
 
-    const patronCorreoLogin = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const patronCorreoLogin = /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;;
     
     const correo = document.querySelector('#correo');
     const contra = document.querySelector('#contrasena');
