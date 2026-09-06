@@ -17,7 +17,7 @@
         <nav class="volver-inicio">
             <ul>
                 <li><a href="index.html">Volver al inicio</a></li>
-                <li><a href="IniciarSesion.html">Iniciar Sesion</a></li>
+                <li><a href="iniciar-sesion.html">Iniciar Sesion</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +41,7 @@
                 <label for="fecha-nacimiento">Fecha de nacimiento: </label>
                 <input type="date" id="fecha-nacimiento">
                 <label for="comentario">Comentario (Opcional):</label>
-                <textarea id="comentario"></textarea>
+                <textarea id="comentario" rows="2"></textarea>
                 <fieldset>
                 <p>¿La mascota está esterilizada?</p>
                     <label>
@@ -55,13 +55,13 @@
                     </label>
                 </fieldset>
             </form>
-            <form id="formulario-dueño" class="formulario-registro" novalidate>
+            <form id="formulario-dueno" class="formulario-registro" novalidate>
                 <h2>Datos Dueño</h2>
                 <label for="nombre-completo">Nombre Completo:</label>
                 <input type="text" id="nombre-completo" placeholder="Nombre completo" required>
 
-                <label for="rut">RUN:</label>
-                <input type="text" id="rut" placeholder="xx.xxx.xxx-x">
+                <label for="rut">RUT:</label>
+                <input type="text" id="rut" placeholder="xx.xxx.xxx-x" required>
 
                 <label for="telefono">Telefono:</label>
                 <input type="text" id="telefono" placeholder="+569xxxxxxxx" required>
@@ -73,9 +73,11 @@
                 <input type="text" id="direccion" placeholder="Direccion" required>
                 
                 <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" placeholder="xxxxxxxxxx">
-                <button type="submit" class="btn-registrar">Registrar</button>
+                <input type="password" id="contrasena" placeholder="xxxxxxxxxx" required>
             </form>
+            <div class="boton-registro">
+                <button type="button" class="btn-registrar">Registrar</button>
+            </div>
         </section>
     </main>
 
