@@ -208,6 +208,9 @@ main {
 }
 
 
+
+.formulario-registro #mensaje-confirmacion-producto,
+#mensaje-confirmacion {
 .formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
@@ -236,7 +239,9 @@ main {
   font-weight: 700;
   cursor: pointer;
   margin-top: 55px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 .btn-registrar:hover {
   background-color: #154c3a;
@@ -639,6 +644,15 @@ main {
 
 /*=== Fin Servicios ===*/
 
+.campo-error {
+  border: 2px solid #a3242f;
+  background: #fbe9ea;
+}
+
+#mensaje-confirmacion {
+  font-weight: bold;
+  color: #2b6cb0;
+}
 
 /*=== Navegación Volver ===*/
 .volver-inicio ul {
