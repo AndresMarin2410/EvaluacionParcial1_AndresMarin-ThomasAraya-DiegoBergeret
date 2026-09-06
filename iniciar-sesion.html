@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/funciones.js"></script>
+    <script src="js/funciones.js" defer></script>
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -33,6 +33,8 @@
                 <input type="password" id="contrasena" placeholder="xxxxxxxxxx" required>
 
                 <button type="submit" class="btn-registrar">Entrar</button>
+
+                <p id="mensaje-login"></p>
 
                 <div class="opcion-crear-cuenta">
                     <p>¿Aún no tienes una cuenta? <a href="registro-usuario.html">Regístrate aquí</a></p>

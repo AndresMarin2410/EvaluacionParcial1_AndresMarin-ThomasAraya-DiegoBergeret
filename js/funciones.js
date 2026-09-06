@@ -65,124 +65,173 @@ if (formularioProducto) {
     }
   });
 }
-//====================== Formulario registro de dueno y macota=====================================================================================
+//====================== Formulario registro de dueno y macota ==========================================
 
-const botonRegistrar = document.querySelector('.btn-registrar');
-const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const patronRut = /^(\d{1,2}(?:\.\d{3}){2}|\d{7,8})-[0-9Kk]$/;
+const formularioRegistroDueno = document.querySelector('#formulario-dueno');
 
-if (botonRegistrar) {
-  botonRegistrar.addEventListener('click', function(e) {
+if (formularioRegistroDueno) {
+  const botonRegistrar = document.querySelector('.btn-registrar');
+  
+  if (botonRegistrar) {
+    botonRegistrar.addEventListener('click', function(e) {
+      e.preventDefault();
+      const patronCorreoUsuario = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const patronRutUsuario = /^(\d{1,2}(?:\.\d{3}){2}|\d{7,8})-[0-9Kk]$/;
+      const patronTelefono = /^\+?[0-9]{8,15}$/;
+
+      const nombreMascota = document.querySelector('#nombre-mascota');
+      const especie = document.querySelector('#especie');
+      const raza = document.querySelector('#raza');
+      const sexoMascota = document.querySelector('#sexo');
+      const esterilizada = document.querySelector('input[name="esterilizada"]:checked');
+
+      const fechaNacimientoMascota = document.querySelector('#fecha-nacimiento');
+      const fechaIngresada = new Date(fechaNacimientoMascota.value + 'T00:00:00')
+      const hoy = new Date();
+      hoy.setHours(0,0,0,0)
+
+      const nombreDueno = document.querySelector('#nombre-completo');
+      const rut = document.querySelector('#rut');
+      const telefono = document.querySelector('#telefono');
+      const correo = document.querySelector('#correo');
+      const direccion = document.querySelector('#direccion');
+      const contra = document.querySelector('#contrasena');
+      const mensajeConfirmacion = document.querySelector('#mensaje-confirmacion');
+
+      let formularioRegistro = true;
+
+
+      if (nombreMascota.value.trim() === '') {
+        nombreMascota.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        nombreMascota.classList.remove('campo-error');
+      }
+
+      if(raza && raza.value.trim() === '') {
+        raza.classList.add('campo-error')
+        formularioRegistro = false;
+      } else{
+        raza.classList.remove('campo-error')
+      }
+
+      if(fechaNacimientoMascota && fechaNacimientoMascota.value.trim() === '' || fechaIngresada > hoy) {
+        fechaNacimientoMascota.classList.add('campo-error')
+        formularioRegistro = false;
+      } else {
+        fechaNacimientoMascota.classList.remove('campo-error')
+      }
+
+      if (especie.value.trim() === '') {
+        especie.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        especie.classList.remove('campo-error');
+      }
+
+      if (sexoMascota.value.trim() === '') {
+        sexoMascota.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        sexoMascota.classList.remove('campo-error');
+      }
+
+      if (nombreDueno.value.trim() === '') {
+        nombreDueno.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        nombreDueno.classList.remove('campo-error');
+      }
+
+      if (!patronRutUsuario.test(rut.value.trim())) {
+        rut.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        rut.classList.remove('campo-error');
+      }
+
+      if (telefono.value.trim() === '' || !patronTelefono.test(telefono.value.trim())) {
+        telefono.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        telefono.classList.remove('campo-error');
+      }
+
+      if (!patronCorreoUsuario.test(correo.value.trim())) {
+        correo.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        correo.classList.remove('campo-error');
+      }
+
+      if (direccion.value.trim() === '') {
+        direccion.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        direccion.classList.remove('campo-error');
+      }
+
+      if (contra.value.trim() === '') {
+        contra.classList.add('campo-error');
+        formularioRegistro = false;
+      } else {
+        contra.classList.remove('campo-error');
+      }
+
+      if (mensajeConfirmacion) {
+        if (formularioRegistro) {
+          mensajeConfirmacion.textContent = 'Registro completado exitosamente.';
+          mensajeConfirmacion.style.color = '#1e6b52';
+        } else {
+          mensajeConfirmacion.textContent = 'Por favor, revisa los campos en rojo.';
+          mensajeConfirmacion.style.color = '#c0392b';
+        }
+      }
+    });
+  }
+}
+
+//====================== Formulario inicio de ssion ==============================================
+
+const formularioInicioSesion = document.querySelector('#formulario-login');
+
+if (formularioInicioSesion) {
+  formularioInicioSesion.addEventListener('submit', function(e) {
     e.preventDefault();
-    const patronCorreoUsuario = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const patronRutUsuario = /^(\d{1,2}(?:\.\d{3}){2}|\d{7,8})-[0-9Kk]$/;
+    
 
-    // Variables registro mascota
-    const nombreMascota = document.querySelector('#nombre-mascota');
-    const especie = document.querySelector('#especie');
-    const raza = document.querySelector('#raza'); // opcional
-    const sexoMascota = document.querySelector('#sexo');
-    const fechaNacimientoMascota = document.querySelector('#fecha-nacimiento');
-    const esterilizada = document.querySelector('input[name="esterilizada"]:checked');
-
-    // Variables registro dueno
-    const nombreDueno = document.querySelector('#nombre-completo');
-    const rut = document.querySelector('#rut');
-    const telefono = document.querySelector('#telefono');
+    const patronCorreoLogin = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
     const correo = document.querySelector('#correo');
-    const direccion = document.querySelector('#direccion');
     const contra = document.querySelector('#contrasena');
-    const mensajeConfirmacion = document.querySelector('#mensaje-confirmacion');
+    const mensajeLogin = document.querySelector('#mensaje-login');
+    
+    let formularioLogin = true;
 
-    let formularioRegistro = true;
-
-    // --- Validaciones registro-mascota ---
-    if (nombreMascota.value.trim() === '') {
-      nombreMascota.classList.add('campo-error');
-      formularioRegistro = false;
-    } else {
-      nombreMascota.classList.remove('campo-error');
-    }
-
-    if(raza.value.trim() === '') {
-      raza.classList.add('campo-error')
-      formularioRegistro = false;
-    } else {
-      raza.classList.remove('campo-error')
-    }
-    if(fechaNacimientoMascota.value.trim() === '') {
-      fechaNacimientoMascota.classList.add('campo-error')
-      formularioRegistro = false;
-    } else {
-      fechaNacimientoMascota.classList.remove('campo-error')
-    }
-
-    if (especie.value.trim() === '') {
-      especie.classList.add('campo-error');
-      formularioRegistro = false;
-    } else {
-      especie.classList.remove('campo-error');
-    }
-
-    if (sexoMascota.value.trim() === '') {
-      sexoMascota.classList.add('campo-error');
-      formularioRegistro = false;
-    } else {
-      sexoMascota.classList.remove('campo-error');
-    }
-
-    // --- Validaciones registro-dueno ---
-    if (nombreDueno.value.trim() === '') {
-      nombreDueno.classList.add('campo-error');
-      formularioRegistro = false;
-    } else {
-      nombreDueno.classList.remove('campo-error');
-    }
-
-    if (!patronRutUsuario.test(rut.value.trim())) {
-      rut.classList.add('campo-error');
-      formularioRegistro = false;
-    } else {
-      rut.classList.remove('campo-error');
-    }
-
-    if (telefono.value.trim() === '') {
-      telefono.classList.add('campo-error');
-      formularioRegistro = false;
-    } else {
-      telefono.classList.remove('campo-error');
-    }
-
-    if (!patronCorreoUsuario.test(correo.value.trim())) {
+    if (correo.value.trim() === '' || !patronCorreoLogin.test(correo.value.trim())) {
       correo.classList.add('campo-error');
-      formularioRegistro = false;
+      formularioLogin = false;
     } else {
       correo.classList.remove('campo-error');
     }
 
-    if (direccion.value.trim() === '') {
-      direccion.classList.add('campo-error');
-      formularioRegistro = false;
-    } else {
-      direccion.classList.remove('campo-error');
-    }
-
+    // Validación de contraseña
     if (contra.value.trim() === '') {
       contra.classList.add('campo-error');
-      formularioRegistro = false;
+      formularioLogin = false;
     } else {
       contra.classList.remove('campo-error');
     }
 
-    if (mensajeConfirmacion) {
-      if (formularioRegistro) {
-        mensajeConfirmacion.textContent = 'Registro completado exitosamente.';
-        mensajeConfirmacion.style.color = '#1e6b52';
+    // Mensajes
+    if (mensajeLogin) {
+      if (formularioLogin) {
+        mensajeLogin.textContent = 'Iniciando sesion...';
+        mensajeLogin.style.color = '#1e6b52';
       } else {
-        mensajeConfirmacion.textContent = 'Por favor, revisa los campos en rojo.';
-        mensajeConfirmacion.style.color = '#c0392b';
+        mensajeLogin.textContent = 'Por favor, ingresa un correo valido y tu contrasena.';
+        mensajeLogin.style.color = '#c0392b';
       }
     }
   });
 }
-
