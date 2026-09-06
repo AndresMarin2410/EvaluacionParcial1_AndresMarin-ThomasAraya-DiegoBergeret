@@ -181,18 +181,23 @@ main {
   color: #263238;
 }
 
-.formulario-registro input, .formulario-registro textarea, .formulario-registro select {
+.formulario-registro input,
+.formulario-registro textarea,
+.formulario-registro select {
   background-color: #fafbfc;
   border: 1px solid #cfd8dc;
   color: #263238;
   padding: 5px;
 }
-.formulario-registro input:focus, .formulario-registro textarea:focus, .formulario-registro select:focus {
+.formulario-registro input:focus,
+.formulario-registro textarea:focus,
+.formulario-registro select:focus {
   border-color: #1e6b52;
   outline-color: #1e6b52;
   background-color: #ffffff;
 }
-.formulario-registro input::placeholder, .formulario-registro textarea::placeholder {
+.formulario-registro input::placeholder,
+.formulario-registro textarea::placeholder {
   color: #8898aa;
   padding-left: 3px;
 }
@@ -202,7 +207,8 @@ main {
   background-color: #fdecea;
 }
 
-.formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
+.formulario-registro #mensaje-confirmacion-producto,
+.formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
   margin-top: 12px;
@@ -254,7 +260,6 @@ main {
 /*=== Fin Registro de usuario === */
 
 /*=========================================================================*/
-
 
 /*=== Inicio blogs === */
 .blog-contenedor {
@@ -340,9 +345,45 @@ main {
   background-color: #205c5a;
 }
 
-/*=== Inicio footer === */
+/*=== Detalle blogs === */
 
-/*=== fin footer === */
+.detalle-blog {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.volver-blogs {
+  color: #2b7a78;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.volver-blogs:hover {
+  text-decoration: underline;
+}
+
+.detalle-blog h2 {
+  color: #2b7a78;
+  font-size: 26px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.imagen-detalle-blog {
+  width: 100%;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.detalle-blog p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
 
 /*=== Fin blogs === */
 
