@@ -80,7 +80,7 @@ if (formularioRegistroDueno) {
     botonRegistrar.addEventListener('click', function(e) {
       e.preventDefault();
       const patronCorreoUsuario = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const patronRutUsuario = /^(\d{1,2}(?:\.\d{3}){2}|\d{7,8})-[0-9Kk]$/;
+      const patronRutUsuario = /^[0-9]{7,8}[0-9Kk]$/;
       const patronTelefono = /^\+?[0-9]{8,15}$/;
 
       const nombreMascota = document.querySelector('#nombre-mascota');
@@ -255,19 +255,21 @@ if (formularioContacto) {
   formularioContacto.addEventListener('submit', function(e) {
     e.preventDefault();
 
+    const nombreContacto = document.querySelector('#nombre')
     const correoContacto = document.querySelector('#correocon');
     
     const patronCorreoContacto = /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
     
-    let formularioValido = true; 
+    let formularioValido = true;
 
     const valorCorreo = correoContacto.value.trim();
-    
-    if (valorCorreo === '' || valorCorreo.length > 100 || !patronCorreoContacto.test(valorCorreo)) {
-      correoContacto.classList.add('campo-error'); 
+    if (valorCorreo === '' ||nombreContacto === '' || valorCorreo.length > 100 || !patronCorreoContacto.test(valorCorreo)) {
+      correoContacto.classList.add('campo-error');
+      nombreContacto.classList.add('campo-error')
       formularioValido = false;
     } else {
       correoContacto.classList.remove('campo-error');
+      nombreContacto.classList.remove('campo-error')
     }
 
     if (formularioValido) {
