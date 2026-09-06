@@ -11,7 +11,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 /*=== Inicio Header === */
 .logo-titulo {
   display: flex;
@@ -181,23 +180,18 @@ main {
   color: #263238;
 }
 
-.formulario-registro input,
-.formulario-registro textarea,
-.formulario-registro select {
+.formulario-registro input, .formulario-registro textarea, .formulario-registro select {
   background-color: #fafbfc;
   border: 1px solid #cfd8dc;
   color: #263238;
   padding: 5px;
 }
-.formulario-registro input:focus,
-.formulario-registro textarea:focus,
-.formulario-registro select:focus {
+.formulario-registro input:focus, .formulario-registro textarea:focus, .formulario-registro select:focus {
   border-color: #1e6b52;
   outline-color: #1e6b52;
   background-color: #ffffff;
 }
-.formulario-registro input::placeholder,
-.formulario-registro textarea::placeholder {
+.formulario-registro input::placeholder, .formulario-registro textarea::placeholder {
   color: #8898aa;
   padding-left: 3px;
 }
@@ -207,8 +201,7 @@ main {
   background-color: #fdecea;
 }
 
-.formulario-registro #mensaje-confirmacion-producto,
-.formulario-registro #mensaje-confirmacion {
+.formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
   margin-top: 12px;
@@ -257,19 +250,6 @@ main {
 
 /*=========================================================================*/
 
-/*=== Inicio blogs === */
-
-/*=== Inicio header === */
-
-/*=== fin blogs === */
-
-/*=== Inicio main === */
-main {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-/*=== Fin main === */
 
 /*=== Inicio blogs === */
 .blog-contenedor {
