@@ -242,3 +242,37 @@ if (formularioInicioSesion) {
     }
   });
 }
+
+  //=============================================================Formulario contacto=====================================
+
+const formularioContacto = document.querySelector('#formulario-contacto');
+const mensajeContacto = document.querySelector('#mensaje-contacto');
+
+if (formularioContacto) {
+  formularioContacto.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const correoContacto = document.querySelector('#correocon');
+    
+    const patronCorreoContacto = /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
+    
+    let formularioValido = true; 
+
+    const valorCorreo = correoContacto.value.trim();
+    
+    if (valorCorreo === '' || valorCorreo.length > 100 || !patronCorreoContacto.test(valorCorreo)) {
+      correoContacto.classList.add('campo-error'); 
+      formularioValido = false;
+    } else {
+      correoContacto.classList.remove('campo-error');
+    }
+
+    if (formularioValido) {
+      mensajeContacto.textContent = 'Mensaje enviado con exito!!';
+      mensajeContacto.style.color = '#1e6b52'; 
+    } else { 
+      mensajeContacto.textContent = 'Por favor, ingresa un correo valido.';
+      mensajeContacto.style.color = '#c0392b'; 
+    }
+  });
+}

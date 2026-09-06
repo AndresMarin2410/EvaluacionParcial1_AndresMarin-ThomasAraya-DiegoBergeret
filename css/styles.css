@@ -207,6 +207,7 @@ main {
   background-color: #fdecea;
 }
 
+
 .formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
@@ -243,6 +244,11 @@ main {
 .btn-registrar:active {
   transform: scale(0.98);
 }
+
+
+
+
+
 
 /*=== Fin Main === */
 
