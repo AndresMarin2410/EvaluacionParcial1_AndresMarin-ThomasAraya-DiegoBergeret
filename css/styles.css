@@ -172,6 +172,7 @@ main {
   padding: 24px;
   box-shadow: 0 4px 12px rgba(30, 107, 82, 0.4);
   box-sizing: border-box;
+  margin-bottom: -70px;
 }
 .formulario-registro h2 {
   color: #1e6b52;
@@ -208,6 +209,7 @@ main {
 
 .formulario-registro #mensaje-confirmacion-producto,
 #mensaje-confirmacion {
+.formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
   margin-top: 12px;
@@ -624,6 +626,8 @@ main {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .btn-agendar-hora:hover {
@@ -642,3 +646,236 @@ main {
   font-weight: bold;
   color: #2b6cb0;
 }
+
+/*=== Navegación Volver ===*/
+.volver-inicio ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.volver-inicio a {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1e6b52;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.volver-inicio a:hover {
+  background-color: #154c3a;
+}
+
+/*=== Contenedor Principal ===*/
+.contenedor-detalle-servicio {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+/*=== Columna Izquierda: Información del Servicio ===*/
+.info-servicio {
+  display: flex;
+  flex-direction: column;
+}
+
+.etiqueta-especie {
+  align-self: flex-start;
+  background-color: #e0ece8;
+  color: #1a2f2b;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.info-servicio h1 {
+  color: #1a2f2b;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.resumen-rapido {
+  display: flex;
+  gap: 25px;
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  margin-bottom: 25px;
+}
+
+.resumen-rapido p {
+  margin: 0;
+  color: #263238;
+  font-size: 0.95rem;
+}
+
+.info-servicio h2,
+.info-servicio h3 {
+  color: #1a2f2b;
+  margin: 20px 0 12px 0;
+}
+
+.info-servicio p {
+  color: #455a64;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.lista-incluye {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.lista-incluye li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  color: #263238;
+  line-height: 1.5;
+}
+
+
+.bloque-advertencia {
+  background-color: #fdecea;
+  border-left: 4px solid #c0392b;
+  padding: 15px;
+  border-radius: 6px;
+  color: #721c24;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/*=== Columna Derecha: Tarjeta de Agendamiento ===*/
+.card-agendamiento {
+  background-color: #ffffff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(30, 107, 82, 0.15);
+  position: sticky;
+  top: 20px;
+}
+
+.precio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.etiqueta-precio {
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.monto {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1a2f2b;
+}
+
+.detalle-duracion {
+  color: #78909c;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #cfd8dc;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
+.formulario-reserva h3 {
+  color: #1e6b52;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.formulario-reserva .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.formulario-reserva label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #263238;
+}
+
+.formulario-reserva input,
+.formulario-reserva select {
+  background-color: #fafbfc;
+  border: 1px solid #cfd8dc;
+  color: #263238;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.formulario-reserva input:focus,
+.formulario-reserva select:focus {
+  border-color: #1e6b52;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.btn-confirmar {
+  width: 100%;
+  background-color: #1e6b52;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-confirmar:hover {
+  background-color: #154c3a;
+}
+
+.btn-confirmar:active {
+  transform: scale(0.98);
+}
+
+/*=== Responsivo ===*/
+@media (max-width: 850px) {
+  .contenedor-detalle-servicio {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card-agendamiento {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .resumen-rapido {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+

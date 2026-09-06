@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <main>
+        <nav class="volver-inicio">
+            <ul>
+                <li><a href="servicios.html">← Volver a Servicios</a></li>
+            </ul>
+        </nav>
+
+        <section class="contenedor-detalle-servicio">
+            <article class="info-servicio">
+                <span class="etiqueta-especie">Ave / Conejo</span>
+                <h1>Consulta ave / conejo</h1>
+                
+                <div class="resumen-rapido">
+                    <p><strong>Duración:</strong> 30 minutos</p>
+                    <p><strong>Modalidad:</strong> Presencial</p>
+                </div>
+
+                <h2>Descripción del servicio</h2>
+                <p>Atención veterinaria especializada para animales exóticos menores. Evaluamos plumaje, pelaje, desgaste dental, dieta, comportamiento y signos vitales específicos de aves y lagomorfos (conejos).</p>
+
+                <h3>¿Qué incluye la consulta?</h3>
+                <ul class="lista-incluye">
+                    <li>- Revisión específica según la anatomía de la especie.</li>
+                    <li>- Evaluación de dieta y ambiente en el hogar.</li>
+                    <li>- Revisión dental (vital en conejos).</li>
+                    <li>- Receta médica o indicaciones de manejo especializado.</li>
+                </ul>
+            </article>
+
+            <aside class="card-agendamiento">
+                <div class="precio-header">
+                    <span class="etiqueta-precio">Valor consulta</span>
+                    <span class="monto">$18.000</span>
+                </div>
+                <p class="detalle-duracion">⏱ Duración aprox. 30 min</p>
+
+                <form class="formulario-reserva">
+                    <h3>Agendar una cita</h3>
+                    <div class="campo">
+                        <label for="nombre-mascota">Nombre de la mascota</label>
+                        <input type="text" id="nombre-mascota" required>
+                    </div>
+                    <div class="campo">
+                        <label for="tipo-especie">Especie</label>
+                        <select id="tipo-especie" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="ave">Ave</option>
+                            <option value="conejo">Conejo</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha-cita">Fecha preferida</label>
+                        <input type="date" id="fecha-cita" required>
+                    </div>
+                    <div class="campo">
+                        <label for="hora-cita">Bloque horario</label>
+                        <select id="hora-cita" required>
+                            <option value="">Selecciona horario</option>
+                            <option value="mañana">Mañana (09:00 - 13:00)</option>
+                            <option value="tarde">Tarde (15:00 - 19:00)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-confirmar">Confirmar reserva</button>
+                </form>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="footer-sitio">
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3>Contacto</h3>
+                <p><span class="icono">📞</span>+569-55668923</p>
+                <p><span class="icono">✉️</span>vetSanmarcos@gmail.com</p>
+                <p><span class="icono">📍</span>Rancagua, Región del Libertador General Bernardo O'Higgins</p>
+            </div>
+
+            <div class="columna-footer">
+
+                <h3>Horario de atención</h3>
+                <p><span class="icono">📅</span>Los 365 días del año</p>
+                <p><span class="icono">⏳</span>Atenciones desde las 8 AM hasta las 22 hrs.</p>
+                
+            </div>
+
+            <div>
+                <img src="img/perro y gato.png" class="logo-footer">
+            </div>
+        </div>
+
+        
+    </footer>
+    
+</body>
+</html>
