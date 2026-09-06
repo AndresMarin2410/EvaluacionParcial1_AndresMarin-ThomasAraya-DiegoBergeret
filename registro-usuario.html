@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funciones.js" defer></script>
     <title>Registro de usuario</title>
 </head>
 <body>
@@ -36,12 +37,17 @@
                 <input type="text" id="raza" placeholder="Raza">
 
                 <label for="sexo">Sexo:</label>
-                <input type="text" id="sexo" placeholder="Sexo" required>
+                <select id="sexo" required>
+                    <option value="">Seleccionar una opcion</option>
+                    <option >Macho</option>
+                    <option >Hembra</option>
+                </select>
 
                 <label for="fecha-nacimiento">Fecha de nacimiento: </label>
                 <input type="date" id="fecha-nacimiento">
                 <label for="comentario">Comentario (Opcional):</label>
                 <textarea id="comentario" rows="2"></textarea>
+
                 <fieldset>
                 <p>¿La mascota está esterilizada?</p>
                     <label>
@@ -77,6 +83,7 @@
             </form>
             <div class="boton-registro">
                 <button type="button" class="btn-registrar">Registrar</button>
+                <p id="mensaje-confirmacion"></p>
             </div>
         </section>
     </main>
