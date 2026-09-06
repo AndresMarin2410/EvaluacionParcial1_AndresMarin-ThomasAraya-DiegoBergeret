@@ -172,6 +172,7 @@ main {
   padding: 24px;
   box-shadow: 0 4px 12px rgba(30, 107, 82, 0.4);
   box-sizing: border-box;
+  margin-bottom: -70px;
 }
 .formulario-registro h2 {
   color: #1e6b52;
@@ -201,7 +202,7 @@ main {
   background-color: #fdecea;
 }
 
-.formulario-registro #mensaje-confirmacion-producto, #mensaje-confirmacion {
+.formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
   margin-top: 12px;
@@ -589,14 +590,3 @@ main {
 /*=== Fin Header ===*/
 
 /*=== Fin Servicios ===*/
-
-
-.campo-error {
-    border: 2px solid #a3242f;
-    background: #fbe9ea;
-}
-
-#mensaje-confirmacion {
-    font-weight: bold;
-    color: #2b6cb0;
-}
