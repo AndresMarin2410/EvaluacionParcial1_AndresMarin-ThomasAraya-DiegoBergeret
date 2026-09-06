@@ -211,7 +211,7 @@ if (formularioInicioSesion) {
     
     let formularioLogin = true;
 
-    // 1. Validar formato de correo
+
     const valorCorreo = correo.value.trim();
     if (valorCorreo === '' || valorCorreo.length > 100 || !patronCorreoLogin.test(valorCorreo)) {
       correo.classList.add('campo-error');
@@ -220,7 +220,6 @@ if (formularioInicioSesion) {
       correo.classList.remove('campo-error');
     }
 
-    // 2. Validar formato de contraseña
     const valorContra = contra.value.trim();
     if (valorContra === '' || valorContra.length < 4 || valorContra.length > 10) {
       contra.classList.add('campo-error');
