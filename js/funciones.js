@@ -64,4 +64,8 @@ if (formularioProducto) {
       mensajeConfirmacion.textContent = "";
     }
   });
+
+
+
+  
 }
