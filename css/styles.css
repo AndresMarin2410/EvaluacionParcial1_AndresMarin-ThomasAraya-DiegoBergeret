@@ -141,13 +141,13 @@ main {
   border-radius: 6px;
   cursor: pointer;
   transition:
-    background-color 0.2s ease, transform 0.1s ease;
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 
 .volver-inicio a:hover {
   background-color: #154c3a;
 }
-
 
 /*=== Fin Header === */
 
@@ -181,20 +181,37 @@ main {
   color: #263238;
 }
 
-.formulario-registro input, .formulario-registro textarea {
+.formulario-registro input,
+.formulario-registro textarea,
+.formulario-registro select {
   background-color: #fafbfc;
   border: 1px solid #cfd8dc;
   color: #263238;
   padding: 5px;
 }
-.formulario-registro input:focus, .formulario-registro textarea:focus {
+.formulario-registro input:focus,
+.formulario-registro textarea:focus,
+.formulario-registro select:focus {
   border-color: #1e6b52;
   outline-color: #1e6b52;
   background-color: #ffffff;
 }
-.formulario-registro input::placeholder, .formulario-registro textarea::placeholder {
+.formulario-registro input::placeholder,
+.formulario-registro textarea::placeholder {
   color: #8898aa;
   padding-left: 3px;
+}
+
+.formulario-registro .campo-error {
+  border: 2px solid #c0392b;
+  background-color: #fdecea;
+}
+
+.formulario-registro #mensaje-confirmacion-producto,
+.formulario-registro #mensaje-confirmacion {
+  color: #1e6b52;
+  font-weight: bold;
+  margin-top: 12px;
 }
 
 .formulario-registro fieldset {
@@ -337,7 +354,6 @@ main {
 .btn-leer-mas:hover {
   background-color: #205c5a;
 }
-
 
 /*=== Inicio footer === */
 
@@ -493,8 +509,6 @@ main {
 }
 /*=== Fin Panel Administrador ===*/
 
-
-
 /*=== Inicio Servicios ===*/
 
 /*=== Inicio Main ===*/
@@ -530,7 +544,7 @@ main {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
 
@@ -555,7 +569,8 @@ main {
   font-size: 20px;
 }
 
-.duracion, .observacion {
+.duracion,
+.observacion {
   font-size: 14px;
   color: #555;
   margin-bottom: 8px;
@@ -585,7 +600,7 @@ main {
 }
 
 .btn-agendar-hora:hover {
-    background-color: #1e6b52;
+  background-color: #1e6b52;
 }
 /*=== Fin Header ===*/
 
