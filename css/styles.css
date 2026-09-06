@@ -11,7 +11,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 /*=== Inicio Header === */
 .logo-titulo {
   display: flex;
@@ -173,6 +172,7 @@ main {
   padding: 24px;
   box-shadow: 0 4px 12px rgba(30, 107, 82, 0.4);
   box-sizing: border-box;
+  margin-bottom: -70px;
 }
 .formulario-registro h2 {
   color: #1e6b52;
@@ -217,8 +217,16 @@ main {
 .formulario-registro fieldset {
   border: 1px solid #cfd8dc;
 }
+.boton-registro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  grid-column: 1 / -1;
+}
 
-.formulario-registro .btn-registrar {
+.btn-registrar {
   background-color: #1e6b52;
   color: #ffffff;
   border: none;
@@ -228,16 +236,12 @@ main {
   font-weight: 700;
   cursor: pointer;
   margin-top: 55px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
-
-.formulario-registro .btn-registrar:hover {
+.btn-registrar:hover {
   background-color: #154c3a;
 }
-
-.formulario-registro .btn-registrar:active {
+.btn-registrar:active {
   transform: scale(0.98);
 }
 
@@ -256,20 +260,6 @@ main {
 /*=== Fin Registro de usuario === */
 
 /*=========================================================================*/
-
-/*=== Inicio blogs === */
-
-/*=== Inicio header === */
-
-/*=== fin blogs === */
-
-/*=== Inicio main === */
-main {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-/*=== Fin main === */
 
 /*=== Inicio blogs === */
 .blog-contenedor {
@@ -355,9 +345,45 @@ main {
   background-color: #205c5a;
 }
 
-/*=== Inicio footer === */
+/*=== Detalle blogs === */
 
-/*=== fin footer === */
+.detalle-blog {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.volver-blogs {
+  color: #2b7a78;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.volver-blogs:hover {
+  text-decoration: underline;
+}
+
+.detalle-blog h2 {
+  color: #2b7a78;
+  font-size: 26px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.imagen-detalle-blog {
+  width: 100%;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.detalle-blog p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
 
 /*=== Fin blogs === */
 
