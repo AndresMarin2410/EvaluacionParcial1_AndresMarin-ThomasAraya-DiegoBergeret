@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto veterinaria</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/funciones.js" defer></script>
-    <title>Clinica veterinaria San Marcos</title>
+    <script src="js/funciones.js"></script>
 </head>
 <body>
-
     <header>
         <nav class="navbar">
             <div class="nav-espacio-vacio"></div>
@@ -16,7 +15,7 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
             </ul>
 
@@ -33,33 +32,28 @@
     </header>
 
     <main>
+        
+        
+    <main>
+        <section class="formularios">
+            <form id="formulario-contacto" class="formulario-registro">
+                <h2>Formulario de contactos</h2>
 
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+
+                <label for="correo">Correo electronico:</label>
+                <input type="email" id="correo" placeholder="correo@ejemplo.cl" required>
+
+                <label for="textarea">Mensaje</label>
+                <textarea rows="3" id="textarea"></textarea>
+
+                <button type="submit" class="btn-registrar">Enviar mensaje</button>
+
+            </form>
+        </section>
     </main>
 
-    <footer class="footer-sitio" id="contacto">
-        <div class="contenedor-footer">
-            <div class="columna-footer">
-                <h3>Contacto</h3>
-                <p><span class="icono">📞</span>+569-55668923</p>
-                <p><span class="icono">✉️</span>vetSanmarcos@gmail.com</p>
-                <p><span class="icono">📍</span>Rancagua, Región del Libertador General Bernardo O'Higgins</p>
-            </div>
-
-            <div class="columna-footer">
-
-                <h3>Horario de atención</h3>
-                <p><span class="icono">📅</span>Los 365 días del año</p>
-                <p><span class="icono">⏳</span>Atenciones desde las 8 AM hasta las 22 hrs.</p>
-                
-            </div>
-
-            <div>
-                <img src="img/perro y gato.png" class="logo-footer">
-            </div>
-        </div>
-
-        
-    </footer>
-    
+    </main>
 </body>
 </html>
