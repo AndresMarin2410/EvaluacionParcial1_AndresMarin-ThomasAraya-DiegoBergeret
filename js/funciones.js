@@ -253,7 +253,7 @@ if (formularioRegistroDueno) {
   if (botonRegistrar) {
     botonRegistrar.addEventListener("click", function (e) {
       e.preventDefault();
-      const patronCorreoUsuario = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const patronCorreoUsuario = /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
       const patronRutUsuario = /^[0-9]{7,8}[0-9Kk]$/;
       const patronTelefono = /^\+?[0-9]{8,15}$/;
 
@@ -384,22 +384,21 @@ if (formularioRegistroDueno) {
 }
 
 //====================== Formulario inicio de sesion ==============================================
- 
 const formularioInicioSesion = document.querySelector("#formulario-login");
- 
+
 if (formularioInicioSesion) {
   formularioInicioSesion.addEventListener("submit", function (e) {
     e.preventDefault();
- 
+
     const patronCorreoLogin =
       /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
- 
+
     const correo = document.querySelector("#correo");
     const contra = document.querySelector("#contrasena");
     const mensajeLogin = document.querySelector("#mensaje-login");
- 
+
     let formularioLogin = true;
- 
+
     const valorCorreo = correo.value.trim();
     if (
       valorCorreo === "" ||
@@ -411,7 +410,7 @@ if (formularioInicioSesion) {
     } else {
       correo.classList.remove("campo-error");
     }
- 
+
     const valorContra = contra.value.trim();
     if (
       valorContra === "" ||
