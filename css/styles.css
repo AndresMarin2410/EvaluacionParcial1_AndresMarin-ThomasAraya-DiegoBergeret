@@ -72,6 +72,228 @@ main {
   padding: 0 20px;
 }
 
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+}
+
+.btn-primario {
+    background-color: #0e8388;
+    color: #ffffff;
+    border: 2px solid #0e8388;
+}
+
+.btn-primario:hover {
+    background-color: #0a5f63;
+    border-color: #0a5f63;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #f4845f;
+    border: 2px solid #f4845f;
+}
+
+.btn-secundario:hover {
+    background-color: #f4845f;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        grid-template-columns: 1.1fr 0.9fr;
+        padding: 3.5rem;
+    }
+}
+
+.hero-texto h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: #0a5f63;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+
+.hero-texto p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.servicios-destacados h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #0a5f63;
+    margin-top: 2.5rem;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+}
+
+.tarjeta-servicios-home {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.tarjeta-servicios-home:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.icono-servicios-home {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.tarjeta-servicios-home h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+    text-align: center;
+}
+
+.tarjeta-servicios-home p {
+    color: #64748b;
+    font-size: 0.95rem;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.tarjeta-servicios-home a {
+    color: #0e8388;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.tarjeta-servicios-home, .imagen-servicios {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-servicios-home a:hover {
+    text-decoration: underline;
+}
+
+.diferenciadores {
+    background: linear-gradient(135deg, #e6f4f4 0%, #f0f8f8 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    border-left: 6px solid #0e8388;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.diferenciadores h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #0a5f63;
+}
+
+.lista-beneficios {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lista-beneficios li {
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.lista-beneficios li::before {
+    position: absolute;
+    left: 0;
+    color: #0e8388;
+    font-weight: bold;
+}
+
+.banner-cta {
+    background: linear-gradient(135deg, #0e8388 0%, #0a5f63 100%);
+    color: #ffffff;
+    padding: 3.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.banner-cta h2 {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+}
+
+.banner-cta p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    opacity: 0.95;
+    margin-bottom: 0.5rem;
+}
+
+.banner-cta .btn {
+    background-color: #ffffff;
+    color: #0a5f63;
+    border-color: #ffffff;
+}
+
+.banner-cta .btn:hover {
+    background-color: #f8fafb;
+    transform: translateY(-2px);
+}
 /*=== Fin Main === */
 
 /*=== Inicio Footer === */
