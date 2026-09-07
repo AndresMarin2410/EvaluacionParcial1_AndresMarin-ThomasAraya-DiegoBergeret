@@ -394,7 +394,7 @@ main {
   padding: 24px;
   box-shadow: 0 4px 12px rgba(30, 107, 82, 0.4);
   box-sizing: border-box;
-  margin-bottom: -70px;
+  margin-bottom: 70px;
 }
 .formulario-registro h2 {
   color: #1e6b52;
@@ -448,6 +448,7 @@ main {
   align-items: center;
   margin-top: 20px;
   grid-column: 1 / -1;
+  transform: translateY(-100px);
 }
 
 .btn-registrar {
