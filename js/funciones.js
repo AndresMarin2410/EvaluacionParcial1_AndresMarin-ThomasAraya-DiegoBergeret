@@ -254,7 +254,7 @@ if (formularioRegistroDueno) {
     botonRegistrar.addEventListener("click", function (e) {
       e.preventDefault();
       const patronCorreoUsuario = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const patronRutUsuario = /^(\d{1,2}(?:\.\d{3}){2}|\d{7,8})-[0-9Kk]$/;
+      const patronRutUsuario = /^[0-9]{7,8}[0-9Kk]$/;
       const patronTelefono = /^\+?[0-9]{8,15}$/;
 
       const nombreMascota = document.querySelector("#nombre-mascota");
@@ -383,38 +383,36 @@ if (formularioRegistroDueno) {
   }
 }
 
-//====================== Formulario inicio de ssion ==============================================
-
+//====================== Formulario inicio de sesion ==============================================
+ 
 const formularioInicioSesion = document.querySelector("#formulario-login");
-
+ 
 if (formularioInicioSesion) {
   formularioInicioSesion.addEventListener("submit", function (e) {
     e.preventDefault();
-
+ 
     const patronCorreoLogin =
       /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
-
+ 
     const correo = document.querySelector("#correo");
     const contra = document.querySelector("#contrasena");
     const mensajeLogin = document.querySelector("#mensaje-login");
-
+ 
     let formularioLogin = true;
-
+ 
     const valorCorreo = correo.value.trim();
     if (
       valorCorreo === "" ||
-      valorCorreo > 100 ||
-      !patronCorreoLogin.test(correo.value.trim())
+      valorCorreo.length > 100 ||
+      !patronCorreoLogin.test(valorCorreo)
     ) {
       correo.classList.add("campo-error");
       formularioLogin = false;
     } else {
       correo.classList.remove("campo-error");
     }
-
-    // validacion de contrasena
+ 
     const valorContra = contra.value.trim();
-
     if (
       valorContra === "" ||
       valorContra.length < 4 ||
@@ -425,17 +423,63 @@ if (formularioInicioSesion) {
     } else {
       contra.classList.remove("campo-error");
     }
-
-    // Mensajes
-    if (mensajeLogin) {
-      if (formularioLogin) {
-        mensajeLogin.textContent = "Iniciando sesion...";
+ 
+    if (formularioLogin) {
+      if (valorCorreo === "admin@gmail.com" && valorContra === "1234") {
+        mensajeLogin.textContent = "Accediendo como administrador....";
         mensajeLogin.style.color = "#1e6b52";
+        window.location.href = "admin-home.html";
       } else {
-        mensajeLogin.textContent =
-          "Por favor, ingresa un correo valido y tu contrasena.";
-        mensajeLogin.style.color = "#c0392b";
+        mensajeLogin.textContent = "Verificacion exitosa";
+        mensajeLogin.style.color = "#1e6b52";
       }
+    } else {
+      mensajeLogin.textContent = "Por favor, ingresa un correo valido y tu contrasena.";
+      mensajeLogin.style.color = "#c0392b";
+    }
+  });
+}
+ 
+//============================================================= Formulario contacto =====================================
+ 
+const formularioContacto = document.querySelector("#formulario-contacto");
+const mensajeContacto = document.querySelector("#mensaje-contacto");
+ 
+if (formularioContacto) {
+  formularioContacto.addEventListener("submit", function (e) {
+    e.preventDefault();
+ 
+    const nombreContacto = document.querySelector("#nombre");
+    const correoContacto = document.querySelector("#correocon");
+ 
+    const patronCorreoContacto =
+      /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
+ 
+    let formularioValido = true;
+ 
+    const valorNombre = nombreContacto.value.trim();
+    const valorCorreo = correoContacto.value.trim();
+ 
+    if (
+      valorCorreo === "" ||
+      valorNombre === "" ||
+      valorCorreo.length > 100 ||
+      !patronCorreoContacto.test(valorCorreo)
+    ) {
+      correoContacto.classList.add("campo-error");
+      nombreContacto.classList.add("campo-error");
+      formularioValido = false;
+    } else {
+      correoContacto.classList.remove("campo-error");
+      nombreContacto.classList.remove("campo-error");
+    }
+ 
+    if (formularioValido) {
+      mensajeContacto.textContent = "Mensaje enviado con exito!!";
+      mensajeContacto.style.color = "#1e6b52";
+    } else {
+      mensajeContacto.textContent = "Por favor, ingresa un correo valido.";
+      mensajeContacto.style.color = "#c0392b";
     }
   });
 }

@@ -207,8 +207,7 @@ main {
   background-color: #fdecea;
 }
 
-.formulario-registro #mensaje-confirmacion-producto,
-#mensaje-confirmacion {
+
 .formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
   color: #1e6b52;
   font-weight: bold;
@@ -247,6 +246,11 @@ main {
 .btn-registrar:active {
   transform: scale(0.98);
 }
+
+
+
+
+
 
 /*=== Fin Main === */
 
@@ -686,17 +690,6 @@ main {
   flex-direction: column;
 }
 
-.etiqueta-especie {
-  align-self: flex-start;
-  background-color: #e0ece8;
-  color: #1a2f2b;
-  padding: 6px 12px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-bottom: 15px;
-}
-
 .info-servicio h1 {
   color: #1a2f2b;
   font-size: 2.2rem;
@@ -873,9 +866,3 @@ main {
     gap: 10px;
   }
 }
-
-
-
-
-
-
