@@ -430,7 +430,9 @@ main {
 }
 
 
-.formulario-registro #mensaje-confirmacion-producto, .formulario-registro #mensaje-confirmacion {
+.formulario-registro #mensaje-confirmacion-producto,
+.formulario-registro #mensaje-confirmacion,
+.formulario-registro #mensaje-confirmacion-usuario {
   color: #1e6b52;
   font-weight: bold;
   margin-top: 12px;
@@ -666,6 +668,9 @@ main {
   margin-bottom: 12px;
 }
 
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .admin-contenido p {
   margin-bottom: 20px;
 }
@@ -1080,6 +1085,51 @@ main {
   .card-agendamiento {
     position: static;
   }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  .nav-espacio-vacio {
+    display: none;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-centro {
+    gap: 15px;
+  }
+  .nav-derecha {
+    justify-content: center;
+    padding-right: 0;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+  }
+}
+
+@media(max-width: 768px) {
+  .contenedor-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .columna-footer {
+    min-width: 100%;
+  }
+
+  .logo-footer {
+    position: static;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1087,4 +1137,14 @@ main {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+.nosotros-contenido,
+.nosotros-equipo, 
+.nosotros-mision
+{
+  transform: translateY(65px);
+  margin-bottom: 100px;
+  text-align: center;
+  min-height: 20vh;
 }
