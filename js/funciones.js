@@ -423,7 +423,7 @@ if (formularioInicioSesion) {
     } else {
       contra.classList.remove("campo-error");
     }
- 
+
     if (formularioLogin) {
       if (valorCorreo === "admin@gmail.com" && valorContra === "1234") {
         mensajeLogin.textContent = "Accediendo como administrador....";
@@ -439,27 +439,27 @@ if (formularioInicioSesion) {
     }
   });
 }
- 
+
 //============================================================= Formulario contacto =====================================
- 
+
 const formularioContacto = document.querySelector("#formulario-contacto");
 const mensajeContacto = document.querySelector("#mensaje-contacto");
- 
+
 if (formularioContacto) {
   formularioContacto.addEventListener("submit", function (e) {
     e.preventDefault();
- 
+
     const nombreContacto = document.querySelector("#nombre");
     const correoContacto = document.querySelector("#correocon");
- 
+
     const patronCorreoContacto =
       /^[^\s@]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/i;
- 
+
     let formularioValido = true;
- 
+
     const valorNombre = nombreContacto.value.trim();
     const valorCorreo = correoContacto.value.trim();
- 
+
     if (
       valorCorreo === "" ||
       valorNombre === "" ||
@@ -473,7 +473,7 @@ if (formularioContacto) {
       correoContacto.classList.remove("campo-error");
       nombreContacto.classList.remove("campo-error");
     }
- 
+
     if (formularioValido) {
       mensajeContacto.textContent = "Mensaje enviado con exito!!";
       mensajeContacto.style.color = "#1e6b52";
