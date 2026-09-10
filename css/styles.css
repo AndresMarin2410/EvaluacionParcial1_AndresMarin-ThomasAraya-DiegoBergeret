@@ -108,7 +108,7 @@ main {
 }
 
 
-.hero {
+.informacion {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -121,32 +121,32 @@ main {
 }
 
 @media (min-width: 768px) {
-    .hero {
+    .informacion {
         grid-template-columns: 1.1fr 0.9fr;
         padding: 3.5rem;
     }
 }
 
-.hero-texto h2 {
+.informacion-texto h2 {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     color: #0a5f63;
     line-height: 1.25;
     margin-bottom: 1rem;
 }
 
-.hero-texto p {
+.informacion-texto p {
     font-size: 1.1rem;
     color: #64748b;
     margin-bottom: 2rem;
 }
 
-.hero-botones {
+.informacion-botones {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.hero-imagen img {
+.informacion-imagen img {
     width: 100%;
     height: auto;
     max-height: 420px;
